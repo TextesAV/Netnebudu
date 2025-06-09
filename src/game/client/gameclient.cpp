@@ -75,6 +75,7 @@
 #include "components/sounds.h"
 #include "components/spectator.h"
 #include "components/statboard.h"
+#include "components/tas.h"
 #include "components/voting.h"
 #include "prediction/entities/character.h"
 #include "prediction/entities/projectile.h"
@@ -127,6 +128,7 @@ void CGameClient::OnConsoleInit()
 					      &m_Particles, // doesn't render anything, just updates all the particles
 					      &m_RaceDemo,
 					      &m_MapSounds,
+					      &m_TAS, // TAS system
 					      &m_Background, // render instead of m_MapLayersBackground when g_Config.m_ClOverlayEntities == 100
 					      &m_MapLayersBackground, // first to render
 					      &m_Particles.m_RenderTrail,
@@ -167,6 +169,7 @@ void CGameClient::OnConsoleInit()
 						  &m_Spectator,
 						  &m_Emoticon,
 						  &m_Menus,
+						  &m_TAS, // TAS input handling
 						  &m_Controls,
 						  &m_TouchControls,
 						  &m_Binds});
